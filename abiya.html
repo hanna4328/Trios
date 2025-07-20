@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tesla Mood Flower Swiper</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom right, #e6fff3, #d9fce7);
+      color: #004d3c;
+      padding: 2rem 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #008f5a;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #247a5a;
+    }
+
+    .swiper {
+      width: 100%;
+      max-width: 480px;
+      margin: 2rem auto;
+    }
+
+    .swiper-slide {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 128, 96, 0.1);
+      text-align: center;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.4s ease;
+    }
+
+    .swiper-slide:hover {
+      transform: translateY(-5px);
+    }
+
+    .flower {
+      font-size: 4.2rem;
+      animation: pulse 2s infinite ease-in-out;
+      margin-bottom: 1rem;
+    }
+
+    .mood {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #00744a;
+    }
+
+    .desc {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #00a878;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #00c389;
+    }
+
+    .why-choose {
+      max-width: 800px;
+      margin: 3rem auto;
+      text-align: center;
+    }
+
+    .why-choose h2 {
+      font-size: 2rem;
+      color: #008455;
+      margin-bottom: 1rem;
+    }
+
+    .why-choose p {
+      color: #444;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .reasons {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      margin-top: 1rem;
+    }
+
+    .reason-box {
+      background: #ffffff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 128, 96, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .reason-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .reason-box h4 {
+      color: #008d66;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .reason-box p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🌸 Tesla Bloom</h1>
+    <p>Your Smart In-Car Nature Companion</p>
+  </header>
+
+  <!-- Swiper Slider -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="flower">🌼</div>
+        <div class="mood">Energetic Bloom</div>
+        <div class="desc">Tesla at full battery and cruising smoothly</div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flower">🌸</div>
+        <div class="mood">Heat-Stressed</div>
+        <div class="desc">Temperature rising, flower feeling dry 🌞</div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flower">🌺</div>
+        <div class="mood">Charging Glow</div>
+        <div class="desc">Tesla is plugged in, flower glowing softly ⚡</div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flower">🥀</div>
+        <div class="mood">Low Power</div>
+        <div class="desc">Battery low, flower drooping 🪫</div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flower">🌻</div>
+        <div class="mood">Sunny Optimist</div>
+        <div class="desc">Car idle but charged – flower chill ☀</div>
+      </div>
+    </div>
+
+    <!-- Swiper Navigation & Pagination -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Why Choose Tesla Bloom Section -->
+  <section class="why-choose">
+    <h2>Why Choose Tesla Bloom?</h2>
+    <p>More than just decoration – Tesla Bloom connects emotion, nature, and intelligent tech inside your car.</p>
+    <div class="reasons">
+      <div class="reason-box">
+        <h4>🌿 Nature Inside</h4>
+        <p>Brings life and tranquility to your car dashboard.</p>
+      </div>
+      <div class="reason-box">
+        <h4>⚙ Emotion Tracking</h4>
+        <p>Reflects driving style, speed & energy through plant moods.</p>
+      </div>
+      <div class="reason-box">
+        <h4>🔋 Eco Awareness</h4>
+        <p>Flower shows power levels and energy status at a glance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  <a href="final.html" style="
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      background: rgba(255, 255, 255, 0.815);
+      color: #8de78d;
+      text-decoration: none;
+      border: 1px solid rgba(0, 183, 255, 0.2);
+      border-radius: 10px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 10px rgba(0, 255, 191, 0.2);
+      transition: all 0.3s ease;
+    " onmouseover="this.style.background='rgba(0,255,0,0.2)'; this.style.color='#0b0f0b';" 
+    onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.color='#ccffcc';">
+      ← Back to Home
+    </a>
+</body>
+</html>
