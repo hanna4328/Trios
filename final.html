@@ -123,68 +123,38 @@
 </div>
 
 
-  <!-- Key Features Section with Background Image -->
-<section class="position-relative" style="background-image: url('https://www.shutterstock.com/image-vector/minimalist-soft-abstract-background-gradient-260nw-2577852445.jpg'); background-size: cover; background-position: center; filter: brightness(100%);">
-  <!-- Overlay -->
-  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5); z-index: 0;"></div>
+ .feature-card {
+  background-color: #f8f9fa;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  <!-- Content -->
-  <div class="container position-relative py-5" style="z-index: 1;">
-    <h2 class="mb-5 text-center mt-5 fw-bold text-white">Key Features</h2>
-    <div class="row g-5 justify-content-center">
-      <!-- Six Cards -->
-      <div class="col-md-4 mb-lg-5 mb-sm-0">
-        <div class="card text-dark h-100 shadow" style="background-color: #f8f9fa;">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Nature-Inspired Dashboard</h5>
-            <p class="card-text">Vehicle data is represented through flower visuals—petals, stems, and vases—creating a peaceful and artistic user experience.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-lg-5 mb-sm-0">
-        <div class="card text-dark h-100 shadow" style="background-color: #f8f9fa;">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Battery Visualization as Petals</h5>
-            <p class="card-text">Each petal represents a percentage of the battery, offering a soft, intuitive way to view battery levels instead of harsh numeric displays.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-lg-5 mb-sm-0">
-        <div class="card text-dark h-100 shadow" style="background-color: #f8f9fa;">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Charging Animation</h5>
-            <p class="card-text">Water fills the vase while charging.</p>
-          </div>
-        </div>
-      </div>
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.6);
+}
 
-      <div class="col-md-4 mb-lg-5 mb-sm-0">
-        <div class="card text-dark h-100 shadow" style="background-color: #f8f9fa;">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Speed-Responsive Petals</h5>
-            <p class="card-text">Petals sway based on vehicle speed.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-lg-5 mb-sm-0">
-        <div class="card text-dark h-100 shadow" style="background-color: #f8f9fa;">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Customizable Alerts</h5>
-            <p class="card-text">Set personalized care reminders based on your plant's needs.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-lg-5 mb-sm-0">
-        <div class="card text-dark h-100 shadow" style="background-color: #f8f9fa;">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Elegant Design</h5>
-            <p class="card-text">A sleek and modern look that fits perfectly in any home or office.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+.animate-feature {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInZoom 1s ease forwards;
+}
+
+.animate-feature:nth-child(1) { animation-delay: 0.1s; }
+.animate-feature:nth-child(2) { animation-delay: 0.2s; }
+.animate-feature:nth-child(3) { animation-delay: 0.3s; }
+.animate-feature:nth-child(4) { animation-delay: 0.4s; }
+.animate-feature:nth-child(5) { animation-delay: 0.5s; }
+.animate-feature:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInZoom {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1.02);
+  }
+}
+
 
 
 <!-- Contact Section -->
