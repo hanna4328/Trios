@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tesla Smart Vase - How It Works</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0b0f0b;
+      color: #f0fff0;
+    }
+
+    /* Hero Section */
+    /* Hero Section Container */
+.hero {
+  position: relative;
+  background: url('k2.png') no-repeat center center/cover;
+  padding: 140px 20px 120px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Glassmorphic Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0 0 40px 40px;
+  padding: 50px 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 157, 255, 0.486);
+  box-shadow: 0 0 30px rgba(154, 206, 210, 0.333), 0 0 80px rgba(0, 238, 255, 0.247);
+animation: floatY 6s ease-in-out infinite;
+
+}
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Heading Style */
+.glass-card h1 {
+  font-size: 3.2rem;
+  color: #ccffcc;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 12px rgba(0, 255, 0, 0.2);
+  letter-spacing: 1.5px;
+}
+
+/* Paragraph Style */
+.glass-card p {
+  font-size: 1.25rem;
+  color: #ddffdd;
+  line-height: 1.8;
+  text-shadow: 0 0 6px rgba(0, 255, 0, 0.05);
+}
+
+/* Smooth Entry Animation */
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Optional glowing animated border */
+.glass-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0 0 40px 40px;
+  border: 2px solid rgba(0, 255, 0, 0.15);
+  box-shadow: 0 0 20px rgba(147, 187, 228, 0.872);
+  animation: borderPulse 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Border Pulse Animation */
+@keyframes borderPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.07);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 255, 0, 0.15);
+  }
+}
+
+
+    .timeline-bg {
+      background: url('k1.png') no-repeat center center/cover;
+      padding: 80px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .timeline-title {
+      font-size: 2.5rem;
+      color: #ffffff;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+
+    .step {
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 128, 0, 0.2);
+    }
+
+    .step h3 {
+      color: #2e7d32;
+    }
+
+    .step p {
+      color: #1b5e20;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #297a76;
+      color: #fefefe;
+    }
+    .quick-fade {
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(84, 81, 81, 0.3), transparent);
+  animation: fadeWave 2s ease-in-out;
+}
+
+@keyframes fadeWave {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- Hero Section -->
+ <!-- Hero Section -->
+<section class="hero">
+  <div class="glass-card" data-aos="fade-up">
+    <h1>How It Works</h1>
+    <p>The Tesla Smart Vase blends modern AI with nature — reacting intuitively to your drive, mood, and motion.</p>
+  </div>
+</section>
+<div class="quick-fade"></div>
+  <!-- Timeline Section -->
+  <section class="timeline-bg">
+    <div class="timeline-glass">
+      <h2 class="timeline-title">How It Works</h2>
+      <div class="timeline-steps">
+        <div class="step" data-aos="fade-right">
+          <h3>🌡️ Detects the Environment</h3>
+          <p>Senses air quality, temperature, humidity and CO₂ inside the Tesla.</p>
+        </div>
+        <div class="step" data-aos="fade-left">
+          <h3>🚗 Feels Driving Behavior</h3>
+          <p>Monitors your speed, braking and acceleration patterns in real-time.</p>
+        </div>
+        <div class="step" data-aos="fade-right">
+          <h3>😊 Expresses Emotions</h3>
+          <p>Changes facial expressions based on how it “feels” inside the car.</p>
+        </div>
+        <div class="step" data-aos="fade-left">
+          <h3>⚠️ Reacts Gently</h3>
+          <p>Gives feedback — scared when speeding, sleepy when idle, angry on sudden brakes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Tesla Smart Vase – Created with 🌿
+  </footer>
+
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
